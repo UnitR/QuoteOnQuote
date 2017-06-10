@@ -9,6 +9,10 @@
 *.userosscache
 *.sln.docstates
 
+#Web.config ignore (for localhost name differences)
+E:\Projects\Actual Stuff\QuoteOnQuote-Rep\QuoteOnQuote\Web.config
+C:\Users\D\Source\Repos\QuoteOnQuote\QuoteOnQuote\Web.config
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
