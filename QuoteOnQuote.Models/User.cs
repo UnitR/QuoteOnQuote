@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace QuoteOnQuote.Models
+namespace Data.Models
 {
-    class User
+    public class User
     {
-
         public int UserId { get; set; }
 
         public string Password { get; set; }
@@ -18,8 +17,6 @@ namespace QuoteOnQuote.Models
 
         public string Email { get; set; }
 
-        [ForeignKey("QuoteId")]
         public virtual ICollection<Quote> Quotes { get; set; }
-            
     }
 }
