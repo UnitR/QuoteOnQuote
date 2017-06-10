@@ -9,14 +9,16 @@ namespace QuoteOnQuote.Models
 {
     class Quote
     {
+        public int QuoteId { get; set; }
+
         public string Text { get; set; }
 
         public string Origin { get; set; }
 
-
-        public virtual int UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual int User { get; set; }
         
-        [ForeignKey("")]
+        // No clue what to set as a ForeignKey here
         public virtual ICollection<Votes> Votes { get; set; }
     }
 }
