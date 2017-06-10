@@ -78,10 +78,6 @@
     <Compile Include="Migrations\201706101836435_GivingUpOnLifePt2.Designer.cs">
       <DependentUpon>201706101836435_GivingUpOnLifePt2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706101839409_RemovedUserIdFromQuotes.cs" />
-    <Compile Include="Migrations\201706101839409_RemovedUserIdFromQuotes.Designer.cs">
-      <DependentUpon>201706101839409_RemovedUserIdFromQuotes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201706101846240_UpdatedVotesEntity.cs" />
     <Compile Include="Migrations\201706101846240_UpdatedVotesEntity.Designer.cs">
       <DependentUpon>201706101846240_UpdatedVotesEntity.cs</DependentUpon>
@@ -121,9 +117,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706101836435_GivingUpOnLifePt2.resx">
       <DependentUpon>201706101836435_GivingUpOnLifePt2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101839409_RemovedUserIdFromQuotes.resx">
-      <DependentUpon>201706101839409_RemovedUserIdFromQuotes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706101846240_UpdatedVotesEntity.resx">
       <DependentUpon>201706101846240_UpdatedVotesEntity.cs</DependentUpon>
