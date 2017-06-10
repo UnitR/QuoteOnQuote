@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QuoteOnQuote.Models
 {
@@ -12,8 +13,10 @@ namespace QuoteOnQuote.Models
 
         public string Origin { get; set; }
 
-        public int UserId { get; set; }
+
+        public virtual int UserId { get; set; }
         
-        public List<Votes> Votes { get; set; }
+        [ForeignKey("")]
+        public virtual ICollection<Votes> Votes { get; set; }
     }
 }

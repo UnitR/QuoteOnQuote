@@ -10,8 +10,9 @@ namespace QuoteOnQuote.Models
     {
         public int Score { get; set; }
 
-        public int QuoteId { get; set; }
 
-        public int UserId { get; set; }
+        public virtual Quote QuoteId { get; set; }
+
+        public virtual User UserId { get; set; }
     }
 }
