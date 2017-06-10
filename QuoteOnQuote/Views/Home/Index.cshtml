@@ -18,13 +18,14 @@
 </head>
 
 <body>
-        <div id="login">
-            <form>
-                <input type="text" name="username" placeholder="Username"/> <br>
-                <input type="text" name="password" placeholder="Password"/> <br>
-                <input type="submit" name="login" value="Login" />
-            </form>
-        </div>
+<div id="login">
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <input type="text" name="username" placeholder="Username"/> <br>
+        <input type="text" name="password" placeholder="Password"/> <br>
+        <input type="submit" name="login" value="Login"/>
+    }
+</div>
 
 </body>
 
