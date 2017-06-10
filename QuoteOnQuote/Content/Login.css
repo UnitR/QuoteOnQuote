@@ -1,0 +1,44 @@
+﻿body{
+     background:  url(../Resources/Images/simson-petrol-110900.jpg) no-repeat center center fixed; 
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#login{
+    width: 40%;
+    height: 60%;
+    margin-left: auto;
+    margin-right:auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+
+    position: relative;
+    top: 280px;
+
+    
+    border-color: #000000;
+
+    border-top-style: solid;
+    border-left-style:solid;
+    border-right-style:solid;
+    border-top-color: rgba(255, 230, 181, 0.8);
+
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-left-color: #f9f8f4;
+    border-right-color: #f9f8f4;
+
+    border-width: 5px;
+    background-color: #f9f8f4;
+    opacity: 0.9;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#login input{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
