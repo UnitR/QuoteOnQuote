@@ -1,18 +1,21 @@
-namespace QuoteOnQuote.Data.Migrations
+using Data.Data;
+using Data.Models;
+
+namespace Data.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<QuoteOnQuote.Data.Data.QuoteOnQuoteDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Data.QuoteOnQuoteDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(QuoteOnQuote.Data.Data.QuoteOnQuoteDbContext context)
+        protected override void Seed(Data.QuoteOnQuoteDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

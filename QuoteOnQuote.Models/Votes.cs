@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace QuoteOnQuote.Models
+namespace Data.Models
 {
     public class Votes
     {
@@ -16,6 +16,6 @@ namespace QuoteOnQuote.Models
 
         public int QuoteId { get; set; }
         
-        public int UserId { get; set; }
+        public int ApplicationUser_Id { get; set; }
     }
 }

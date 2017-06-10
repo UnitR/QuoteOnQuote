@@ -36,6 +36,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -56,21 +62,36 @@
     <Compile Include="Migrations\201706101449011_AddedDbSets.Designer.cs">
       <DependentUpon>201706101449011_AddedDbSets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706101620280_RemovedUserEntity.cs" />
+    <Compile Include="Migrations\201706101620280_RemovedUserEntity.Designer.cs">
+      <DependentUpon>201706101620280_RemovedUserEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706101815381_Initial.cs" />
+    <Compile Include="Migrations\201706101815381_Initial.Designer.cs">
+      <DependentUpon>201706101815381_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706101834191_GivingUpOnLife.cs" />
+    <Compile Include="Migrations\201706101834191_GivingUpOnLife.Designer.cs">
+      <DependentUpon>201706101834191_GivingUpOnLife.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706101836435_GivingUpOnLifePt2.cs" />
+    <Compile Include="Migrations\201706101836435_GivingUpOnLifePt2.Designer.cs">
+      <DependentUpon>201706101836435_GivingUpOnLifePt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706101839409_RemovedUserIdFromQuotes.cs" />
+    <Compile Include="Migrations\201706101839409_RemovedUserIdFromQuotes.Designer.cs">
+      <DependentUpon>201706101839409_RemovedUserIdFromQuotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706101846240_UpdatedVotesEntity.cs" />
+    <Compile Include="Migrations\201706101846240_UpdatedVotesEntity.Designer.cs">
+      <DependentUpon>201706101846240_UpdatedVotesEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Content\bootstrap-theme.css.map" />
-    <None Include="Content\bootstrap-theme.min.css.map" />
-    <None Include="Content\bootstrap.css.map" />
-    <None Include="Content\bootstrap.min.css.map" />
-    <None Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="fonts\glyphicons-halflings-regular.woff" />
-    <None Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
-    <None Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuoteOnQuote.Models\QuoteOnQuote.Models.csproj">
@@ -89,18 +110,25 @@
     <EmbeddedResource Include="Migrations\201706101449011_AddedDbSets.resx">
       <DependentUpon>201706101449011_AddedDbSets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706101620280_RemovedUserEntity.resx">
+      <DependentUpon>201706101620280_RemovedUserEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706101815381_Initial.resx">
+      <DependentUpon>201706101815381_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706101834191_GivingUpOnLife.resx">
+      <DependentUpon>201706101834191_GivingUpOnLife.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706101836435_GivingUpOnLifePt2.resx">
+      <DependentUpon>201706101836435_GivingUpOnLifePt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706101839409_RemovedUserIdFromQuotes.resx">
+      <DependentUpon>201706101839409_RemovedUserIdFromQuotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706101846240_UpdatedVotesEntity.resx">
+      <DependentUpon>201706101846240_UpdatedVotesEntity.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
