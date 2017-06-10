@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace QuoteOnQuote.Models
+namespace Data.Models
 {
     public class Quote
     {
@@ -14,8 +14,6 @@ namespace QuoteOnQuote.Models
         public string Text { get; set; }
 
         public string Origin { get; set; }
-
-        public int UserId { get; set; }
         
         // No clue what to set as a ForeignKey here
         public virtual ICollection<Votes> Votes { get; set; }

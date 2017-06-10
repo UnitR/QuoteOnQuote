@@ -6,8 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using QuoteOnQuote.Models;
 using QuoteOnQuote.Data;
+using Data.Models;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace QuoteOnQuote.Data.Data
+namespace Data.Data
 {
     class QuoteOnQuoteDbContext : DbContext
     {
@@ -21,7 +23,6 @@ namespace QuoteOnQuote.Data.Data
             return new QuoteOnQuoteDbContext();
         }
 
-        public DbSet<User> Users { get; set; }
         public DbSet<Quote> Quotes { get; set; }
         public DbSet<Votes> Votes { get; set; }
     }
