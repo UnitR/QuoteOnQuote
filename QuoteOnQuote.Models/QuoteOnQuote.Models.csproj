@@ -33,11 +33,31 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Quote.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Votes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuoteOnQuote.Data\QuoteOnQuote.Data.csproj">
+      <Project>{bc4b5d64-adb7-4718-a023-a6b3bc3f48ed}</Project>
+      <Name>QuoteOnQuote.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuoteOnQuote\QuoteOnQuote.Web.csproj">
+      <Project>{5d706bb2-07f0-482d-873e-7f93730f8658}</Project>
+      <Name>QuoteOnQuote.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,14 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using QuoteOnQuote.Models;
+﻿using System.Data.Entity;
 
 namespace QuoteOnQuote.Data.Data
 {
     public class QuoteOnQuoteDbContext : DbContext
     {
-        public DbSet<>
+        public QuoteOnQuoteDbContext()
+            : base("DefaultConnection")
+        {
+            
+        }
+
+        public QuoteOnQuoteDbContext Create()
+        {
+            return new QuoteOnQuoteDbContext();
+        }
     }
 }

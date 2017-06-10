@@ -195,7 +195,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\QuoteOnQuote\QuoteOnQuote.Web.csproj">
+      <Project>{5d706bb2-07f0-482d-873e-7f93730f8658}</Project>
+      <Name>QuoteOnQuote.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
