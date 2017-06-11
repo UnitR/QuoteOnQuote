@@ -22,6 +22,7 @@ namespace QuoteOnQuote.Controllers.ManageQuotes
             var userQuotes = from q in db.Quotes
                              where q.UserId == userId
                              select q;
+
             return View(userQuotes.ToList());
         }
 
@@ -51,10 +52,12 @@ namespace QuoteOnQuote.Controllers.ManageQuotes
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "QuoteId,Text,Origin")] Quote quote)
+        public ActionResult Create([Bind(Include = "Text,Origin")] Quote quote)
         {
             if (ModelState.IsValid)
             {
+                quote.DatePosted = DateTime.Now;
+                quote.UserId = User.Identity.GetUserId();
                 db.Quotes.Add(quote);
                 db.SaveChanges();
                 return RedirectToAction("Index");

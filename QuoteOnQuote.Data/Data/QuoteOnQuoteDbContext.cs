@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuoteOnQuote.Models;
-using QuoteOnQuote.Data;
 using Data.Models;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Microsoft.AspNet.Identity;

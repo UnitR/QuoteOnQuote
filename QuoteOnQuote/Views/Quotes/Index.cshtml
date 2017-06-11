@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Data.Models.Quote>
+﻿@using Data.Models
+@model IEnumerable<Data.Models.Quote>
 
 @{
     ViewBag.Title = "Index";
@@ -27,6 +28,23 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Origin)
+        </td>
+        <td>
+            @{
+                List<Votes> list = new List<Votes>();
+                foreach (var vote in item.Votes)
+                {
+                    if(vote.Rating == 1)
+                    {
+                        list.Add(vote);
+                    }
+
+                }
+            }
+            Score: @list.Count()
+        </td>
+        <td>
+            Votes: @item.Votes.Count()
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.QuoteId }) |

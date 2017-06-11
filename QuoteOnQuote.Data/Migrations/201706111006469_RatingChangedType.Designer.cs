@@ -7,13 +7,13 @@ namespace Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ForeignKey : IMigrationMetadata
+    public sealed partial class RatingChangedType : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ForeignKey));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RatingChangedType));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706110822149_ForeignKey"; }
+            get { return "201706111006469_RatingChangedType"; }
         }
         
         string IMigrationMetadata.Source

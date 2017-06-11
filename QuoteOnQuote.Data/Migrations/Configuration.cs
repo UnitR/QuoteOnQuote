@@ -1,6 +1,3 @@
-using Data.Data;
-using Data.Models;
-
 namespace Data.Migrations
 {
     using System;

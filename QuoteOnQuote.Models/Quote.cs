@@ -15,6 +15,8 @@ namespace Data.Models
 
         public string Origin { get; set; }
 
+        public DateTime DatePosted { get; set; }
+
         public string UserId { get; set; }
 
         [ForeignKey("UserId")]
