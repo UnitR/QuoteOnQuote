@@ -12,10 +12,10 @@ namespace Data.Models
         public int VotesId { get; set; }
 
         //What the user rated the quote. Either 1 or 0. 0 for a negative rating.
-        public bool Rating { get; set; }
+        public int Rating { get; set; }
 
         public int QuoteId { get; set; }
-        
-        public int ApplicationUser_Id { get; set; }
+
+        public string UserId { get; set; }
     }
 }

@@ -54,33 +54,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\QuoteOnQuoteDbContext.cs" />
-    <Compile Include="Migrations\201706101436154_Initial.cs" />
-    <Compile Include="Migrations\201706101436154_Initial.Designer.cs">
-      <DependentUpon>201706101436154_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201706110934385_Initial.cs" />
+    <Compile Include="Migrations\201706110934385_Initial.Designer.cs">
+      <DependentUpon>201706110934385_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706101449011_AddedDbSets.cs" />
-    <Compile Include="Migrations\201706101449011_AddedDbSets.Designer.cs">
-      <DependentUpon>201706101449011_AddedDbSets.cs</DependentUpon>
+    <Compile Include="Migrations\201706110955015_ChangedUserIdVotes.cs" />
+    <Compile Include="Migrations\201706110955015_ChangedUserIdVotes.Designer.cs">
+      <DependentUpon>201706110955015_ChangedUserIdVotes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706101620280_RemovedUserEntity.cs" />
-    <Compile Include="Migrations\201706101620280_RemovedUserEntity.Designer.cs">
-      <DependentUpon>201706101620280_RemovedUserEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706101815381_Initial.cs" />
-    <Compile Include="Migrations\201706101815381_Initial.Designer.cs">
-      <DependentUpon>201706101815381_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706101834191_GivingUpOnLife.cs" />
-    <Compile Include="Migrations\201706101834191_GivingUpOnLife.Designer.cs">
-      <DependentUpon>201706101834191_GivingUpOnLife.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706101836435_GivingUpOnLifePt2.cs" />
-    <Compile Include="Migrations\201706101836435_GivingUpOnLifePt2.Designer.cs">
-      <DependentUpon>201706101836435_GivingUpOnLifePt2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706101846240_UpdatedVotesEntity.cs" />
-    <Compile Include="Migrations\201706101846240_UpdatedVotesEntity.Designer.cs">
-      <DependentUpon>201706101846240_UpdatedVotesEntity.cs</DependentUpon>
+    <Compile Include="Migrations\201706111006469_RatingChangedType.cs" />
+    <Compile Include="Migrations\201706111006469_RatingChangedType.Designer.cs">
+      <DependentUpon>201706111006469_RatingChangedType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,28 +84,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706101436154_Initial.resx">
-      <DependentUpon>201706101436154_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706110934385_Initial.resx">
+      <DependentUpon>201706110934385_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101449011_AddedDbSets.resx">
-      <DependentUpon>201706101449011_AddedDbSets.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706110955015_ChangedUserIdVotes.resx">
+      <DependentUpon>201706110955015_ChangedUserIdVotes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101620280_RemovedUserEntity.resx">
-      <DependentUpon>201706101620280_RemovedUserEntity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101815381_Initial.resx">
-      <DependentUpon>201706101815381_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101834191_GivingUpOnLife.resx">
-      <DependentUpon>201706101834191_GivingUpOnLife.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101836435_GivingUpOnLifePt2.resx">
-      <DependentUpon>201706101836435_GivingUpOnLifePt2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101846240_UpdatedVotesEntity.resx">
-      <DependentUpon>201706101846240_UpdatedVotesEntity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706111006469_RatingChangedType.resx">
+      <DependentUpon>201706111006469_RatingChangedType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
