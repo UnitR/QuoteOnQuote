@@ -20,7 +20,7 @@ namespace QuoteOnQuote.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Dashboard()
         {
             ViewBag.Message = "Your contact page.";
 

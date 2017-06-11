@@ -13,10 +13,68 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
+
+<!--Sort list is not okay-->
 <body>
-        
+    <div class="midBlock" id="sort">
+        <ul id="sort" class="List">
+            <li><a>Sort 1</a></li>
+            <li><a>Sort 2</a></li>
+            <li><a>Sort 3</a></li>
+        </ul>
+    </div>
 
 
+    <div id="dashboard" class="midBlock listContainer">
+
+       <div id="originList">
+         <ul class="List">
+            <li>Q1 </li> 
+            <li>Q1 </li>
+            <li>Q1 </li>
+            <li>Q1 </li>
+            <li>Q1 </li>
+            <li>Q1 </li>
+         </ul>
+       </div>
+
+        <div id="quoteList">
+            <ul class="List">
+                <li>Q1 </li>
+                <li>Q1 </li>
+                <li>Q1 </li>
+                <li>Q1 </li>
+                <li>Q1 </li>
+                <li>Q1 </li>
+             </ul>
+            </div>
+
+            <div id="commandList" class="listContainer">
+                  <div>
+                       <ul class="List Votes">
+                           <li><div>+</div></li>
+                           <li><div>+</div></li>
+                           <li><div>+</div></li>
+                           <li><div>+</div></li>
+                           <li><div>+</div></li>
+                           <li><div>+</div></li>
+                       </ul>
+                  </div>
+              </div>
+
+        <div id="commandList" class="listContainer">
+                   <div id="downvoteContainer">
+                       <ul class="List Votes" id="downvote">
+                           <li><div>-</div></li>
+                           <li><div>-</div></li>
+                           <li><div>-</div></li>
+                           <li><div>-</div></li>
+                           <li><div>-</div></li>
+                           <li><div>-</div></li>
+                       </ul>
+                   </div>
+            </div>
+    </div>
 </body>
 
 </html>

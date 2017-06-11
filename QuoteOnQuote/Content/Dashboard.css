@@ -1,3 +1,113 @@
 ﻿body {
-    background-color
+     background:  url(../Resources/Images/White-Background-Iphone-Pics-1.jpg) no-repeat center center fixed; 
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.midBlock{
+    width: 75%;
+     margin-left:auto;
+    margin-right: auto;
+}
+
+#sort{
+    /*!!!!!!!!!!!!!!!!!!! Hidden sort buttons*/
+    display: none;
+    background-color: white;
+    position: relative;
+    padding-bottom: 0.3%;
+    text-align: center;
+
+    right: 1%;
+}
+
+#sort li{
+    float: left;
+    width:33%;
+    border: 1px solid black;
+
+
+}
+
+#dashboard{
+
+    vertical-align: middle;
+    padding-top: 1%;
+    padding-bottom: 3%;
+    padding-right: 3%;
+
+    background-color: black;
+    opacity: 0.8;
+}
+
+.listContainer div{
+        display: inline-block;
+}
+
+.List{
+    list-style: none;
+}
+
+.List li{
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+
+    margin-top: 17px;
+
+}
+
+
+.List div{
+    width: 20%;
+    border: 1px solid white;
+}
+
+.Votes{
+      color: white;
+    
+    text-align: center;
+    font-size: 1.1em;   
+}
+
+.Votes li{
+    width: 20%;
+    margin-top: 40%;
+    padding-top: 15%;
+    border-bottom-style: none !important;
+}
+
+.Votes div{
+    width: 30px;
+    height: 20px;
+    line-height: 15px;
+}
+
+#originList{
+    width: 18.5%;
+}
+
+#downvoteCotainer{
+    width: 10%;
+}
+
+#downvote{
+    font-size: 1.12em;
+}
+
+#quoteList{
+
+    width: 65%;
+}
+
+#commandList{
+
+    width: 5%;
+}
+
+
+#commandList div{
+    padding-bottom: 10px;
 }
