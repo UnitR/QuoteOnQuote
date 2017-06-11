@@ -15,7 +15,7 @@ namespace Data.Models
         public bool Rating { get; set; }
 
         public int QuoteId { get; set; }
-        
-        public int ApplicationUser_Id { get; set; }
+
+        public int UserId { get; set; }
     }
 }

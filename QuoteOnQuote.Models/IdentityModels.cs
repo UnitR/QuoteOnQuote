@@ -38,5 +38,7 @@ namespace Data.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Data.Models.Quote> Quotes { get; set; }
     }
 }

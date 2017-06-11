@@ -78,9 +78,17 @@
     <Compile Include="Migrations\201706101836435_GivingUpOnLifePt2.Designer.cs">
       <DependentUpon>201706101836435_GivingUpOnLifePt2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706101846240_UpdatedVotesEntity.cs" />
-    <Compile Include="Migrations\201706101846240_UpdatedVotesEntity.Designer.cs">
-      <DependentUpon>201706101846240_UpdatedVotesEntity.cs</DependentUpon>
+    <Compile Include="Migrations\201706102313496_SlaviPt2.cs" />
+    <Compile Include="Migrations\201706102313496_SlaviPt2.Designer.cs">
+      <DependentUpon>201706102313496_SlaviPt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706110821433_Initial1.cs" />
+    <Compile Include="Migrations\201706110821433_Initial1.Designer.cs">
+      <DependentUpon>201706110821433_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706110822149_ForeignKey.cs" />
+    <Compile Include="Migrations\201706110822149_ForeignKey.Designer.cs">
+      <DependentUpon>201706110822149_ForeignKey.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,8 +126,14 @@
     <EmbeddedResource Include="Migrations\201706101836435_GivingUpOnLifePt2.resx">
       <DependentUpon>201706101836435_GivingUpOnLifePt2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101846240_UpdatedVotesEntity.resx">
-      <DependentUpon>201706101846240_UpdatedVotesEntity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706102313496_SlaviPt2.resx">
+      <DependentUpon>201706102313496_SlaviPt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706110821433_Initial1.resx">
+      <DependentUpon>201706110821433_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706110822149_ForeignKey.resx">
+      <DependentUpon>201706110822149_ForeignKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
