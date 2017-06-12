@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201706111006469_RatingChangedType.Designer.cs">
       <DependentUpon>201706111006469_RatingChangedType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706111219262_NullableRating.cs" />
+    <Compile Include="Migrations\201706111219262_NullableRating.Designer.cs">
+      <DependentUpon>201706111219262_NullableRating.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706111006469_RatingChangedType.resx">
       <DependentUpon>201706111006469_RatingChangedType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706111219262_NullableRating.resx">
+      <DependentUpon>201706111219262_NullableRating.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -11,10 +11,6 @@
     <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
-
-
-
 </head>
 
 <body>
@@ -24,7 +20,7 @@
         @Html.AntiForgeryToken()
         <input type="text" name="username" placeholder="Username"/>
         <br>
-        <input type="text" name="password" placeholder="Password"/>
+        <input type="password" name="password" placeholder="Password"/>
         <br>
         <input type="submit" name="login" value="Login"/>
     }
