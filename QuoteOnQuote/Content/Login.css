@@ -8,15 +8,15 @@
 
 #login{
     width: 40%;
-    height: 60%;
-    margin-left: auto;
+    height: 65%;
+    margin-left: 30%;
     margin-right:auto;
     display: flex;
     text-align: center;
     justify-content: space-around;
 
-    position: relative;
-    top: 280px;
+    position: absolute;
+    top: 20%;
 
     
     border-color: #000000;
@@ -42,3 +42,36 @@
     margin-top: 10%;
     margin-bottom: 10%;
 }
+
+#regLink{
+    position:relative;
+    top: 60%;
+    left: 35%;
+
+    color: whitesmoke;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+#P1{
+    font-size: 5em;
+
+}
+
+#P2 {
+    font-size: 2.8em;
+    position: absolute;
+    bottom: 30%;
+    left: 13%;
+
+}
+
+#P3{
+    font-size: 1.4em;
+}
+
+#P4{
+    font-size: 1em;
+    position: relative;
+    padding-left: 10%;
+}
+

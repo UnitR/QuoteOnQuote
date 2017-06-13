@@ -4,8 +4,8 @@
     {
         public int VotesId { get; set; }
 
-        //What the user rated the quote. Either 1 or 0. 0 for a negative rating.
-        public int Rating { get; set; }
+        //What the user rated the quote. -1 for negative, 1 for positive
+        public int? Rating { get; set; }
 
         public int QuoteId { get; set; }
 
