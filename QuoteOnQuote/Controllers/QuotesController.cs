@@ -15,6 +15,7 @@ namespace QuoteOnQuote.Controllers.ManageQuotes
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+
         // GET: Quotes
         public ActionResult Index()
         {
@@ -22,6 +23,12 @@ namespace QuoteOnQuote.Controllers.ManageQuotes
             var userQuotes = from q in db.Quotes
                              where q.UserId == userId
                              select q;
+
+            foreach (var item in userQuotes)
+            {
+                var ratings = item.Votes.Where(r => r.Rating == 1);
+                item.Score = ratings.Count();
+            }
 
             return View(userQuotes.ToList());
         }
@@ -38,6 +45,10 @@ namespace QuoteOnQuote.Controllers.ManageQuotes
             {
                 return HttpNotFound();
             }
+
+            var ratings = quote.Votes.Where(r => r.Rating == 1);
+            quote.Score = ratings.Count();
+
             return View(quote);
         }
 
@@ -86,10 +97,11 @@ namespace QuoteOnQuote.Controllers.ManageQuotes
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "QuoteId,Text,Origin")] Quote quote)
+        public ActionResult Edit([Bind(Include = "QuoteId,Text,Origin,DatePosted,UserId")] Quote quote)
         {
             if (ModelState.IsValid)
             {
+                quote.DateEdited = DateTime.Now;
                 db.Entry(quote).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

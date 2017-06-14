@@ -207,7 +207,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Dashboard.css" />
     <Content Include="Content\Login.css" />
-    <Content Include="Content\Manager.css" />
+    <Content Include="Content\Manager\BaseManager.css" />
+    <Content Include="Content\Manager\Details.css" />
+    <Content Include="Content\Manager\Index.css" />
+    <Content Include="Content\Manager\LargerText.css" />
     <Content Include="Content\Navbar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

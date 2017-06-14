@@ -2,61 +2,53 @@
 @model IEnumerable<Data.Models.Quote>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Quote Manager";
 }
 
-<link rel="stylesheet" href="~/Content/Manager.css"/>
-<link rel="stylesheet" href="~/Content/Dashboard.css" />
+<link rel="stylesheet" href="~/Content/Manager/BaseManager.css" />
+<link rel="stylesheet" href="~/Content/Manager/Index.css" />
 
 <body>
-    <div id="container" class="dashboard">
-        <p>
-            @Html.ActionLink("Create New", "Create")
-        </p>
-            <table class="table">
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Origin)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Text)
-                    </th>
-                    <th></th>
-                </tr>
+<div id="container">
+    <h3>Your Quotes</h3>
+    <p>
+        @Html.ActionLink("Create New", "Create", new {id = "link"})
+    </p>
+    <table class="table">
+        <tr id="header">
+            <th>
+                @Html.DisplayNameFor(model => model.Origin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
+            <th></th>
+            <th>
+                @Html.DisplayName("Score")
+            </th>
+            <th></th>
+        </tr>
 
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Origin)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Text)
-                        </td>
-                        <td>
-                            @{
-                                List<Votes> list = new List<Votes>();
-                                foreach (var vote in item.Votes)
-                                {
-                                    if (vote.Rating == 1)
-                                    {
-                                        list.Add(vote);
-                                    }
-
-                                }
-                            }
-                            Score: @list.Count()
-                        </td>
-                        <td>
-                            Votes: @item.Votes.Count()
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new {id = item.QuoteId}) |
-                            @Html.ActionLink("Details", "Details", new {id = item.QuoteId}) |
-                            @Html.ActionLink("Delete", "Delete", new {id = item.QuoteId})
-                        </td>
-                    </tr>
-                }
-        </table>
-    </div>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Origin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Text)
+                </td>
+                <td></td>
+                <td id="score">
+                    @item.Score
+                </td>
+                <td id="options">
+                    @Html.ActionLink("Edit", "Edit", new {id = item.QuoteId}) |
+                    @Html.ActionLink("Details", "Details", new {id = item.QuoteId}) |
+                    @Html.ActionLink("Delete", "Delete", new {id = item.QuoteId})
+                </td>
+            </tr>
+        }
+    </table>
+</div>
 </body>

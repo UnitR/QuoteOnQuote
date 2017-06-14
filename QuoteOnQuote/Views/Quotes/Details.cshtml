@@ -1,42 +1,84 @@
 ﻿@model Data.Models.Quote
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Details for a Quote";
 }
 
-<h2>Details</h2>
+<link rel="stylesheet" href="~/Content/Manager/BaseManager.css"/>
+<link rel="stylesheet" href="~/Content/Manager/Details.css"/>
+<link rel="stylesheet" href="~/Content/Manager/LargerText.css"/>
 
-<div>
-    <h4>Quote</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Text)
-        </dt>
+<body>
+<div id="container">
+    <div>
+        <h4>Quote Details</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Origin)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Text)
-        </dd>
+            <dd class="enlarge">
+                @Html.DisplayFor(model => model.Origin)
+            </dd>
+            
+            <dt>
+                @Html.DisplayNameFor(model => model.Text)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Origin)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Origin)
-        </dd>
+            <dd id="text" class="enlarge">
+                @Html.DisplayFor(model => model.Text)
+            </dd>
         
-        <dd>
-            Score: @Model.Votes.Count()
-        </dd>
-        
-        <dd>
-            @Html.DisplayFor(model => model.DatePosted)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Score)
+            </dt>
+            
+            <dd>
+                @Html.DisplayFor(model => model.Score)
+            </dd>
+            
+            <dt>
+                @Html.DisplayNameFor(model => model.Votes)
+            </dt>
+            
+            @if (Model.Votes.Count() == 0 || Model.Votes == null)
+            {
+                <dd>
+                    No votes yet
+                </dd>
+            }
+            else
+            {
+                <dd>
+                    @Model.Votes.Count()
+                </dd>
+            }
 
-    </dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.DatePosted)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DatePosted)
+            </dd>
+            
+            @if (Model.DateEdited != null)
+            {
+                <dt>
+                    @Html.DisplayNameFor(model => model.DateEdited)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DateEdited)
+                </dd>
+            }
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.QuoteId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.QuoteId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+</body>

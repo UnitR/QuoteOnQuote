@@ -70,6 +70,18 @@
     <Compile Include="Migrations\201706111219262_NullableRating.Designer.cs">
       <DependentUpon>201706111219262_NullableRating.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706141848380_DataTypeQuoteText.cs" />
+    <Compile Include="Migrations\201706141848380_DataTypeQuoteText.Designer.cs">
+      <DependentUpon>201706141848380_DataTypeQuoteText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706141934391_Quote.LastEdited.cs" />
+    <Compile Include="Migrations\201706141934391_Quote.LastEdited.Designer.cs">
+      <DependentUpon>201706141934391_Quote.LastEdited.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706142005279_DisplayNamesForQuoteEntity.cs" />
+    <Compile Include="Migrations\201706142005279_DisplayNamesForQuoteEntity.Designer.cs">
+      <DependentUpon>201706142005279_DisplayNamesForQuoteEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,6 +112,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706111219262_NullableRating.resx">
       <DependentUpon>201706111219262_NullableRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706141848380_DataTypeQuoteText.resx">
+      <DependentUpon>201706141848380_DataTypeQuoteText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706141934391_Quote.LastEdited.resx">
+      <DependentUpon>201706141934391_Quote.LastEdited.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706142005279_DisplayNamesForQuoteEntity.resx">
+      <DependentUpon>201706142005279_DisplayNamesForQuoteEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
