@@ -6,11 +6,12 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Navbar.css")" rel="stylesheet" type="text/css"/> 
     <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
-      @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 
 </head>
+<body>
 @*<body>
     <div class="navbar navbar-default bg-danger navbar-fixed-top ">
         <div class="container">
@@ -62,14 +63,17 @@
        <li>@Html.ActionLink("Dashboard", "Dashboard", "Home")</li>
        <li>@Html.ActionLink("Quote Manager", "Index", "Quotes")</li>
    </ul>
-    @Html.Partial("_LoginPartial")
 </div>
 
 
 
 @RenderBody()
+    
+<footer>
+    @Html.Partial("_LoginPartial")
+</footer>
 
-    @Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

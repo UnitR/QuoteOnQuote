@@ -1,0 +1,54 @@
+﻿.wrapper {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #d3b16e;
+    opacity: 0.7;
+    height: 35px;
+}
+
+.wrapper ul > li {
+    float: left;
+}
+
+.wrapper ul {
+    list-style-type: none;
+}
+
+.wrapper li a {
+    display: block;
+    text-decoration: none;
+    margin-top: -12px;
+    font-family: 'Calligraffitti', cursive;
+    color: #302c25;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.wrapper li a:hover {
+    text-decoration: none;
+    color: #302c25;
+}
+
+.wrapper li a:active {
+    text-decoration: none;
+    color: #302c25;
+}
+
+.wrapper li a:visited {
+    text-decoration: none;
+    color: #302c25;
+}
+
+#leftButton {
+    position: absolute;
+    bottom: 3px;
+    left: 5%;
+}
+
+#rightButton {
+    position: absolute;
+    bottom: 3px;
+    right: 5%;
+}
