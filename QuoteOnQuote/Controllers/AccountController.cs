@@ -58,6 +58,11 @@ namespace QuoteOnQuote.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            if (Request.IsAuthenticated)
+            {
+                return RedirectToAction("Dashboard", "Home");
+            }
+
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -393,7 +398,7 @@ namespace QuoteOnQuote.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
 
         //
