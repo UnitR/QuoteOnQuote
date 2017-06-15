@@ -209,8 +209,8 @@
     <Content Include="Content\Login.css" />
     <Content Include="Content\LoginPartialDesign.css" />
     <Content Include="Content\Manager\BaseManager.css" />
-    <Content Include="Content\Manager\Details.css" />
-    <Content Include="Content\Manager\Index.css" />
+    <Content Include="Content\Manager\QuoteDetails.css" />
+    <Content Include="Content\Manager\QuoteIndex.css" />
     <Content Include="Content\Manager\LargerText.css" />
     <Content Include="Content\Navbar.css" />
     <Content Include="favicon.ico" />
@@ -285,6 +285,7 @@
     <Content Include="Views\Quotes\Edit.cshtml" />
     <Content Include="Views\Quotes\Index.cshtml" />
     <Content Include="Views\Account\LoginAlt.cshtml" />
+    <Content Include="Views\Manage\SetUsername.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

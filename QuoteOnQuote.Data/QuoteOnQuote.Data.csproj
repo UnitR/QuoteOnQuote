@@ -82,6 +82,14 @@
     <Compile Include="Migrations\201706142005279_DisplayNamesForQuoteEntity.Designer.cs">
       <DependentUpon>201706142005279_DisplayNamesForQuoteEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706151742320_AppUserDisplayName.cs" />
+    <Compile Include="Migrations\201706151742320_AppUserDisplayName.Designer.cs">
+      <DependentUpon>201706151742320_AppUserDisplayName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706151853277_RemovedDisplayName.cs" />
+    <Compile Include="Migrations\201706151853277_RemovedDisplayName.Designer.cs">
+      <DependentUpon>201706151853277_RemovedDisplayName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -121,6 +129,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706142005279_DisplayNamesForQuoteEntity.resx">
       <DependentUpon>201706142005279_DisplayNamesForQuoteEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706151742320_AppUserDisplayName.resx">
+      <DependentUpon>201706151742320_AppUserDisplayName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706151853277_RemovedDisplayName.resx">
+      <DependentUpon>201706151853277_RemovedDisplayName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

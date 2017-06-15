@@ -1,0 +1,26 @@
+﻿@model Data.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Change Display Name";
+}
+
+<link rel="stylesheet" href="~/Content/Manager/BaseManager.css"/>
+
+<body>
+<div id="container">
+    <h2>Change display name</h2>
+    <hr/>
+    @using (Html.BeginForm("SetUsername", "Manage", new { username = Model.UserName }, 
+        FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.HiddenFor(model => model.Id, new { name = "id"})
+        @Html.TextBox("username", null, new { @class = "form-control" })
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Save" class="btn btn-default"/>
+            </div>
+        </div>
+    }
+</div>
+</body>
