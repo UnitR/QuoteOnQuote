@@ -1,6 +1,12 @@
-﻿@{
+﻿@using Data.Models;
+
+@model List<Quote>
+
+
+@{
     ViewBag.Title = "Contact";
 }
+
 
 <html>
 <head>
@@ -11,70 +17,38 @@
     <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>  
 
 </head>
 
 <!--Sort list is not okay-->
 <body>
-    <div class="midBlock" id="sort">
-        <ul id="sort" class="List">
-            <li><a>Sort 1</a></li>
-            <li><a>Sort 2</a></li>
-            <li><a>Sort 3</a></li>
-        </ul>
-    </div>
 
 
-    <div id="dashboard" class="midBlock listContainer">
+    <div id="dashboard" class="listContainer">
+            <ul id="listRow">
+                       @foreach (var item in Model)
+                       {
+                <li>
+                    <div id="containerEntry">
+                        <div id="originList">
+                             @item.Origin;
+                        </div>
 
-       <div id="originList">
-         <ul class="List">
-            <li>Q1 </li> 
-            <li>Q1 </li>
-            <li>Q1 </li>
-            <li>Q1 </li>
-            <li>Q1 </li>
-            <li>Q1 </li>
-         </ul>
-       </div>
-
-        <div id="quoteList">
-            <ul class="List">
-                <li>Q1 </li>
-                <li>Q1 </li>
-                <li>Q1 </li>
-                <li>Q1 </li>
-                <li>Q1 </li>
-                <li>Q1 </li>
-             </ul>
-            </div>
-
-            <div id="commandList" class="listContainer">
-                  <div>
-                       <ul class="List Votes">
-                           <li><div>+</div></li>
-                           <li><div>+</div></li>
-                           <li><div>+</div></li>
-                           <li><div>+</div></li>
-                           <li><div>+</div></li>
-                           <li><div>+</div></li>
-                       </ul>
-                  </div>
-              </div>
-
-        <div id="commandList" class="listContainer">
-                   <div id="downvoteContainer">
-                       <ul class="List Votes" id="downvote">
-                           <li><div>-</div></li>
-                           <li><div>-</div></li>
-                           <li><div>-</div></li>
-                           <li><div>-</div></li>
-                           <li><div>-</div></li>
-                           <li><div>-</div></li>
-                       </ul>
-                   </div>
-            </div>
-    </div>
-</body>
-
+                        <div id="quoteList">
+                             @item.Text;
+                        </div>
+                        
+                        <div onclick="" id="voteUp" class="commandList"> + </div>
+                        <div onclick="" id="voteDown" class="commandList"> - </div>
+                        <div id="containerVotes"> N/a </div>
+                        
+                      
+                    </div>
+                </li> 
+                       }
+            </ul>
+          </div>
+        </body>
 </html>
