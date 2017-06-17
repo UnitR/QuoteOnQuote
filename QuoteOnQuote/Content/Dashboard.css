@@ -6,12 +6,6 @@
   background-size: cover;
 }
 
-.midBlock{
-    width: 75%;
-     margin-left:auto;
-    margin-right: auto;
-}
-
 #sort{
     /*!!!!!!!!!!!!!!!!!!! Hidden sort buttons*/
     display: none;
@@ -27,87 +21,90 @@
     float: left;
     width:33%;
     border: 1px solid black;
-
+    
 
 }
 
 #dashboard{
+  
+
+      width: 75%;
+     margin-left:auto;
+    margin-right: auto;
 
     vertical-align: middle;
     padding-top: 1%;
     padding-bottom: 3%;
     padding-right: 3%;
 
-    background-color: black;
-    opacity: 0.8;
+   
 }
 
 .listContainer div{
         display: inline-block;
+        
 }
 
-.List{
+#listRow{
     list-style: none;
 }
 
-.List li{
-    border-bottom-style: solid;
-    border-bottom-color: white;
-    border-bottom-width: 1px;
-
-    margin-top: 17px;
+#listRow li{
+    margin-top: 2%;
+    margin-bottom: -4%;
 
 }
 
-
-.List div{
-    width: 20%;
-    border: 1px solid white;
-}
-
-.Votes{
-      color: white;
     
-    text-align: center;
-    font-size: 1.1em;   
-}
-
-.Votes li{
-    width: 20%;
-    margin-top: 40%;
-    padding-top: 15%;
-    border-bottom-style: none !important;
-}
-
-.Votes div{
-    width: 30px;
-    height: 20px;
-    line-height: 15px;
-}
-
 #originList{
-    width: 18.5%;
+    font-size: 1.4em;
+    width: 10.5%;
+    margin-left: 2%;
+
 }
 
-#downvoteCotainer{
-    width: 10%;
-}
-
-#downvote{
-    font-size: 1.12em;
-}
 
 #quoteList{
-
-    width: 65%;
+    font-size: 1.4em;
+    width: 60%;
 }
 
-#commandList{
+.commandList{
+    text-align: center;
+    color: white;
 
+    border: none !important;
+
+    font-size: 1.7em;
+    display: block;
+    width: 10px;
+    padding-bottom: 2%;
+
+    
+}
+
+
+
+
+#containerEntry{
+
+    margin-top: 9px;
+    position:relative;
+    background-color: black;
+    opacity: 0.8;
+    width: 100%;
+}
+
+#containerEntry div{
+    border-bottom: 1px solid white;
+
+    margin-right: 3%;
+    
+    display: inline-block;
+}
+
+#containerVotes{
     width: 5%;
-}
-
-
-#commandList div{
-    padding-bottom: 10px;
+    border: none !important;
+    
 }
