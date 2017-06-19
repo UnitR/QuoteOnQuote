@@ -30,6 +30,7 @@ namespace Data.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Quote>().HasRequired(u => u.User).WithMany().HasForeignKey(u => u.UserId);
+            modelBuilder.Entity<Votes>().HasRequired(u => u.Quote).
 
             base.OnModelCreating(modelBuilder);
         }
