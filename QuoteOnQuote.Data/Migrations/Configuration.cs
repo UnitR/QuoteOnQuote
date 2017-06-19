@@ -1,10 +1,7 @@
-namespace Data.Migrations
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+using System.Data.Entity.Migrations;
 
+namespace QuoteOnQuote.Data.Migrations
+{
     internal sealed class Configuration : DbMigrationsConfiguration<Data.QuoteOnQuoteDbContext>
     {
         public Configuration()

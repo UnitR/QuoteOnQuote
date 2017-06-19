@@ -54,33 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\QuoteOnQuoteDbContext.cs" />
-    <Compile Include="Migrations\201706110934385_Initial.cs" />
-    <Compile Include="Migrations\201706110934385_Initial.Designer.cs">
-      <DependentUpon>201706110934385_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706110955015_ChangedUserIdVotes.cs" />
-    <Compile Include="Migrations\201706110955015_ChangedUserIdVotes.Designer.cs">
-      <DependentUpon>201706110955015_ChangedUserIdVotes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706111006469_RatingChangedType.cs" />
-    <Compile Include="Migrations\201706111006469_RatingChangedType.Designer.cs">
-      <DependentUpon>201706111006469_RatingChangedType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706111219262_NullableRating.cs" />
-    <Compile Include="Migrations\201706111219262_NullableRating.Designer.cs">
-      <DependentUpon>201706111219262_NullableRating.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706141848380_DataTypeQuoteText.cs" />
-    <Compile Include="Migrations\201706141848380_DataTypeQuoteText.Designer.cs">
-      <DependentUpon>201706141848380_DataTypeQuoteText.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706141934391_Quote.LastEdited.cs" />
-    <Compile Include="Migrations\201706141934391_Quote.LastEdited.Designer.cs">
-      <DependentUpon>201706141934391_Quote.LastEdited.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706142005279_DisplayNamesForQuoteEntity.cs" />
-    <Compile Include="Migrations\201706142005279_DisplayNamesForQuoteEntity.Designer.cs">
-      <DependentUpon>201706142005279_DisplayNamesForQuoteEntity.cs</DependentUpon>
+    <Compile Include="Migrations\201706190846252_Initial.cs" />
+    <Compile Include="Migrations\201706190846252_Initial.Designer.cs">
+      <DependentUpon>201706190846252_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,29 +77,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706110934385_Initial.resx">
-      <DependentUpon>201706110934385_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706110955015_ChangedUserIdVotes.resx">
-      <DependentUpon>201706110955015_ChangedUserIdVotes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706111006469_RatingChangedType.resx">
-      <DependentUpon>201706111006469_RatingChangedType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706111219262_NullableRating.resx">
-      <DependentUpon>201706111219262_NullableRating.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706141848380_DataTypeQuoteText.resx">
-      <DependentUpon>201706141848380_DataTypeQuoteText.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706141934391_Quote.LastEdited.resx">
-      <DependentUpon>201706141934391_Quote.LastEdited.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706142005279_DisplayNamesForQuoteEntity.resx">
-      <DependentUpon>201706142005279_DisplayNamesForQuoteEntity.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
@@ -131,6 +84,11 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706190846252_Initial.resx">
+      <DependentUpon>201706190846252_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
