@@ -1,4 +1,6 @@
-﻿namespace Data.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace QuoteOnQuote.Models
 {
     public class Votes
     {
@@ -10,5 +12,8 @@
         public int QuoteId { get; set; }
 
         public string UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public ApplicationUser User { get; set; }
     }
 }

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using Data.Models;
 using Microsoft.AspNet.Identity;
+using QuoteOnQuote.Models;
 
-namespace QuoteOnQuote.Controllers.ManageQuotes
+namespace QuoteOnQuote.Controllers
 {
     public class QuotesController : Controller
     {

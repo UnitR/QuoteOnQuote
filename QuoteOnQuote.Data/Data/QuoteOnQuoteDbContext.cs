@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QuoteOnQuote.Models;
-using Data.Models;
-using System.Data.Entity.ModelConfiguration.Conventions;
-using Microsoft.AspNet.Identity;
+﻿using System.Data.Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using QuoteOnQuote.Models;
 
-namespace Data.Data
+namespace QuoteOnQuote.Data.Data
 {
     class QuoteOnQuoteDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -29,9 +21,6 @@ namespace Data.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Quote>().HasRequired(u => u.User).WithMany().HasForeignKey(u => u.UserId);
-            modelBuilder.Entity<Votes>().HasRequired(u => u.Quote).
-
             base.OnModelCreating(modelBuilder);
         }
     }
