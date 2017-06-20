@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Data.Models;
+using PagedList;
+using QuoteOnQuote.Models;
+
 
 namespace QuoteOnQuote.Controllers
 {
@@ -11,18 +13,16 @@ namespace QuoteOnQuote.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public EmptyResult Vote(bool Positive)
+        public EmptyResult Vote(bool positive)
         {
-
-
-
+            
+             
             return new EmptyResult();
         }
 
         public ActionResult Index()
         {
            
-
             return View();
         }
 
@@ -33,7 +33,7 @@ namespace QuoteOnQuote.Controllers
             return View();
         }
 
-        public ActionResult Dashboard()
+        public ActionResult Dashboard(int? page)
         {
             List<Quote> dashQuotes = new List<Quote>();
 
@@ -76,7 +76,9 @@ namespace QuoteOnQuote.Controllers
                 //}
             }
 
-            return View(dashQuotes);
+            var pageNumber = page ?? 1;
+
+            return View(dashQuotes.ToPagedList(pageNumber, 12));
         }
     }
 }

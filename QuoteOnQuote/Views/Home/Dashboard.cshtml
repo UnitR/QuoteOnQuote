@@ -1,12 +1,14 @@
-﻿@using Data.Models;
+﻿@using PagedList.Mvc;
+@using PagedList;
 
-@model List<Quote>
+@model PagedList<QuoteOnQuote.Models.Quote>
 
 
 @{
     ViewBag.Title = "Contact";
 }
 
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 <html>
 <head>
@@ -26,29 +28,30 @@
 <body>
 
 
-    <div id="dashboard" class="listContainer">
-            <ul id="listRow">
-                       @foreach (var item in Model)
-                       {
-                <li>
-                    <div id="containerEntry">
-                        <div id="originList">
-                             @item.Origin;
-                        </div>
+<div id="dashboard" class="listContainer">
+    <ul id="listRow">
+        @foreach (var item in Model)
+        {
+            <li>
+                <div id="containerEntry">
+                    <div id="originList">
+                        @item.Origin;
+                    </div>
 
-                        <div id="quoteList">
-                             @item.Text;
-                        </div>
+                    <div id="quoteList">
+                        @item.Text;
+                    </div>
                         
-                        <div onclick="" id="voteUp" class="commandList"> + </div>
-                        <div onclick="" id="voteDown" class="commandList"> - </div>
-                        <div id="containerVotes"> N/a </div>
+                    <div onclick="" id="voteUp" class="commandList"> + </div>
+                    <div onclick="" id="voteDown" class="commandList"> - </div>
+                    <div id="containerVotes"> N/a </div>
                         
                       
-                    </div>
-                </li> 
-                       }
-            </ul>
-          </div>
-        </body>
+                </div>
+            </li> 
+        }
+    </ul>
+</div>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Dashboard", new {page}))
+</body>
 </html>
