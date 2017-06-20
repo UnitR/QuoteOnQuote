@@ -16,7 +16,9 @@ namespace QuoteOnQuote.Controllers
         public ActionResult voteCheck(string id ,bool vote)
         {
             List<Quote> dbQuotes = new List<Quote>();
-            Votes quoteVote = new Votes();
+            List<Votes> quoteVotes = new List<Votes>();
+            
+
             
 
             dbQuotes = db.Quotes.ToList();
