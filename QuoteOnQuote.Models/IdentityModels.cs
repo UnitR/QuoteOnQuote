@@ -40,6 +40,6 @@ namespace QuoteOnQuote.Models
         }
 
         public System.Data.Entity.DbSet<Quote> Quotes { get; set; }
-        //public System.Data.Entity.DbSet<Data.Models.Votes> Votes { get; set; }
+        public System.Data.Entity.DbSet<Votes> Votes { get; set; }
     }
 }
