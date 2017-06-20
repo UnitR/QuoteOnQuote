@@ -4,20 +4,18 @@
     ViewBag.Title = "Log in";
 }
 
-<link href="@Url.Content("~/Content/Account.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/Login.css")" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
 
 <body>
-    <div id="form" style="height:60%">
+    <div id="login">
         <div>
             <section>
                 @using (Html.BeginForm("Login", "Account", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
                 {
                     @Html.AntiForgeryToken()
-                    <h4>Log in</h4>
-                    <hr/>
                     @Html.ValidationSummary(true, "", new {@class = "text-danger"})
-                    <div class="form-group">   
+                    <div class="form-group">
                         @Html.LabelFor(m => m.Email)
                         <div>
                             @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
