@@ -58,6 +58,14 @@
     <Compile Include="Migrations\201706190846252_Initial.Designer.cs">
       <DependentUpon>201706190846252_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706200842091_VotesToAppUser.cs" />
+    <Compile Include="Migrations\201706200842091_VotesToAppUser.Designer.cs">
+      <DependentUpon>201706200842091_VotesToAppUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706200914073_DbContextVotes.cs" />
+    <Compile Include="Migrations\201706200914073_DbContextVotes.Designer.cs">
+      <DependentUpon>201706200914073_DbContextVotes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +97,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706190846252_Initial.resx">
       <DependentUpon>201706190846252_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706200842091_VotesToAppUser.resx">
+      <DependentUpon>201706200842091_VotesToAppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706200914073_DbContextVotes.resx">
+      <DependentUpon>201706200914073_DbContextVotes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

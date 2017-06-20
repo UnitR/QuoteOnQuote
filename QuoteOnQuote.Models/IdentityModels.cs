@@ -10,10 +10,12 @@ namespace QuoteOnQuote.Models
     public class ApplicationUser : IdentityUser
     {
         public virtual ICollection<Quote> Quotes { get; set; }
+        public virtual ICollection<Votes> Votes { get; set; }
 
         public ApplicationUser()
         {
             Quotes = new HashSet<Quote>();
+            Votes = new HashSet<Votes>();
         }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
@@ -38,6 +40,6 @@ namespace QuoteOnQuote.Models
         }
 
         public System.Data.Entity.DbSet<Quote> Quotes { get; set; }
-        //public System.Data.Entity.DbSet<Data.Models.Votes> Votes { get; set; }
+        public System.Data.Entity.DbSet<Votes> Votes { get; set; }
     }
 }
