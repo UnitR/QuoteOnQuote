@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
-using Data.Models;
+using QuoteOnQuote.Models;
 
 namespace QuoteOnQuote.Controllers
 {
@@ -16,13 +16,16 @@ namespace QuoteOnQuote.Controllers
         public ActionResult voteCheck(string id ,bool vote)
         {
             List<Quote> dbQuotes = new List<Quote>();
+            Votes quoteVote = new Votes();
+            
+
             dbQuotes = db.Quotes.ToList();
 
             foreach (var item in dbQuotes)
             {
                 if(id == item.QuoteId.ToString())
                 {
-                    item.Votes
+                    
                 }
             }
 
