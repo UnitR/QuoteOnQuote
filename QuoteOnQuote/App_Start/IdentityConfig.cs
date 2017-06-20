@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using Data.Models;
+using QuoteOnQuote.Models;
 
 namespace QuoteOnQuote
 {
@@ -53,11 +53,9 @@ namespace QuoteOnQuote
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
             {
-                RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
+                RequiredLength = 8,
                 RequireDigit = true,
                 RequireLowercase = true,
-                RequireUppercase = true,
             };
 
             // Configure user lockout defaults

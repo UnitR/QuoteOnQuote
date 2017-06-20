@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -15,6 +17,7 @@ namespace QuoteOnQuote.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         public ManageController()
         {
@@ -64,14 +67,17 @@ namespace QuoteOnQuote.Controllers
                 : "";
 
             var userId = User.Identity.GetUserId();
+            var user = await db.Users.FirstAsync(u => u.Id == userId);
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
-                PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
-                TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
-                Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                PhoneNumber = await UserManager.GetPhoneNumberAsync(user.Id),
+                TwoFactor = await UserManager.GetTwoFactorEnabledAsync(user.Id),
+                Logins = await UserManager.GetLoginsAsync(user.Id),
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(user.Id),
+                UserName = user.UserName
             };
+
             return View(model);
         }
 
@@ -320,6 +326,39 @@ namespace QuoteOnQuote.Controllers
             }
             var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
             return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> SetUsername()
+        {
+            var userId = User.Identity.GetUserId();
+            var user = await UserManager.FindByIdAsync(userId);
+
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> SetUsername(string id, string username)
+        {
+            var user = await db.Users.FirstAsync(u => u.Id == id);
+            if (user != null)
+            {
+                user.UserName = username;
+                db.Entry(user).State = EntityState.Modified;
+                await db.SaveChangesAsync();
+            }
+
+            var model = new IndexViewModel
+            {
+                HasPassword = HasPassword(),
+                PhoneNumber = await UserManager.GetPhoneNumberAsync(user.Id),
+                TwoFactor = await UserManager.GetTwoFactorEnabledAsync(user.Id),
+                Logins = await UserManager.GetLoginsAsync(user.Id),
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(user.Id),
+                UserName = user.UserName
+            };
+
+            return RedirectToAction("Index", model);
         }
 
         protected override void Dispose(bool disposing)

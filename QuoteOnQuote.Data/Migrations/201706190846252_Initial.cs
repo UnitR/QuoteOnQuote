@@ -1,4 +1,4 @@
-namespace Data.Migrations
+namespace QuoteOnQuote.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
@@ -15,14 +15,12 @@ namespace Data.Migrations
                         Text = c.String(),
                         Origin = c.String(),
                         DatePosted = c.DateTime(nullable: false),
-                        UserId = c.String(nullable: false, maxLength: 128),
-                        ApplicationUser_Id = c.String(maxLength: 128),
+                        DateEdited = c.DateTime(),
+                        UserId = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.QuoteId)
-                .ForeignKey("dbo.AspNetUsers", t => t.ApplicationUser_Id)
-                .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
-                .Index(t => t.UserId)
-                .Index(t => t.ApplicationUser_Id);
+                .ForeignKey("dbo.AspNetUsers", t => t.UserId)
+                .Index(t => t.UserId);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -87,13 +85,15 @@ namespace Data.Migrations
                 c => new
                     {
                         VotesId = c.Int(nullable: false, identity: true),
-                        Rating = c.Boolean(nullable: false),
+                        Rating = c.Int(),
                         QuoteId = c.Int(nullable: false),
-                        UserId = c.Int(nullable: false),
+                        UserId = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.VotesId)
+                .ForeignKey("dbo.AspNetUsers", t => t.UserId)
                 .ForeignKey("dbo.Quotes", t => t.QuoteId, cascadeDelete: true)
-                .Index(t => t.QuoteId);
+                .Index(t => t.QuoteId)
+                .Index(t => t.UserId);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -111,19 +111,19 @@ namespace Data.Migrations
         {
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.Votes", "QuoteId", "dbo.Quotes");
+            DropForeignKey("dbo.Votes", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Quotes", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.Quotes", "ApplicationUser_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.Votes", new[] { "UserId" });
             DropIndex("dbo.Votes", new[] { "QuoteId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
-            DropIndex("dbo.Quotes", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.Quotes", new[] { "UserId" });
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Votes");

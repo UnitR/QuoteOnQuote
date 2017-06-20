@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Data.Models
+namespace QuoteOnQuote.Models
 {
     public class Quote
     {
+        public Quote()
+        {
+            Votes = new HashSet<Votes>();
+        }
         public int QuoteId { get; set; }
 
         [DataType(DataType.MultilineText)]
@@ -20,10 +24,10 @@ namespace Data.Models
         [Display(Name = "Last Edited")]
         public DateTime? DateEdited { get; set; }
 
+        [ForeignKey("User")]
         public string UserId { get; set; }
-
-        [ForeignKey("UserId")]
-        public ApplicationUser User { get; set; }
+        
+        public virtual ApplicationUser User { get; set; }
 
         [NotMapped]
         public int Score { get; set; }
