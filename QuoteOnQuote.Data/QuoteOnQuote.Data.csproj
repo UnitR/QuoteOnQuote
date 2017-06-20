@@ -131,6 +131,7 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\voteUpPost-ajax.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\bootstrap.js" />

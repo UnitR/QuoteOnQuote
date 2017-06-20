@@ -11,14 +11,7 @@ namespace QuoteOnQuote.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public EmptyResult Vote(bool Positive)
-        {
-
-
-
-            return new EmptyResult();
-        }
-
+       
         public ActionResult Index()
         {
            

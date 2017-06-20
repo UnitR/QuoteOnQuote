@@ -1,5 +1,6 @@
 ﻿@using Data.Models;
 
+
 @model List<Quote>
 
 
@@ -33,21 +34,22 @@
                 <li>
                     <div id="containerEntry">
                         <div id="originList">
-                             @item.Origin;
+                            @item.Origin;
+                        </div>
+                        <div id="quoteList">
+                            @item.Text;
                         </div>
 
-                        <div id="quoteList">
-                             @item.Text;
-                        </div>
-                        
-                        <div onclick="" id="voteUp" class="commandList"> + </div>
-                        <div onclick="" id="voteDown" class="commandList"> - </div>
+
+                        <form>
+                            <div onclick="voteUp(@item.QuoteId); return false" id="voteUp-@item.QuoteId" class="commandList"> + </div>
+                            <div onclick="voteDown(@item.QuoteId); return false" id="voteDown-@item.QuoteId" class="commandList"> - </div>
+                        </form>
                         <div id="containerVotes"> N/a </div>
-                        
-                      
+
                     </div>
-                </li> 
-                       }
+                </li>
+                     }
             </ul>
           </div>
         </body>
