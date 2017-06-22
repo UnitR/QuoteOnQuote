@@ -77,11 +77,20 @@
 
     font-size: 1.7em;
     display: block;
-    width: 10px;
+    width: 5%;
     padding-bottom: 2%;
-
+    cursor: pointer;
     
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+
+    transition: background-color linear 1s;
 }
+
 
 
 
@@ -95,6 +104,8 @@
     width: 100%;
 }
 
+
+
 #containerEntry div{
     border-bottom: 1px solid white;
 
@@ -103,8 +114,8 @@
     display: inline-block;
 }
 
-#containerVotes{
-    width: 5%;
+#containerScore{
+    width: 10px;
     border: none !important;
     
 }

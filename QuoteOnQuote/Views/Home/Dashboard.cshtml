@@ -19,8 +19,10 @@
     <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script src="~/Scripts/jquery-1.10.2.js"></script>
-    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>  
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/voteUpPost-ajax.js"></script>  
+    <script src="~/Scripts/voetDownPost-ajax.js"></script>    
 
 </head>
 
@@ -35,16 +37,16 @@
             <li>
                 <div id="containerEntry">
                     <div id="originList">
-                        @item.Origin;
+                        @item.Origin
                     </div>
 
                     <div id="quoteList">
                         @item.Text;
                     </div>
                         
-                    <div onclick="" id="voteUp" class="commandList"> + </div>
-                    <div onclick="" id="voteDown" class="commandList"> - </div>
-                    <div id="containerVotes"> N/a </div>
+                    <a  onclick="voteUp(@item.QuoteId)"> <div id="voteUp" class="commandList"> + </div></a>
+                    <a onclick="voteDown(@item.QuoteId)"> <div id="voteDown" class="commandList"> - </div></a>
+                    <div id="containerScore">@item.Score</div>
                         
                       
                 </div>

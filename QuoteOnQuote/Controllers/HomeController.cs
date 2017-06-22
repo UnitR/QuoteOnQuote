@@ -65,6 +65,8 @@ namespace QuoteOnQuote.Controllers
                     dashQuotes[i].Text = "------";
                 }
 
+                
+
                 //if (dbQuotes[i].Votes == null)
                 //{
                 //    //!!!!!!!!!!!!
